@@ -1,0 +1,33 @@
+->CREATE DATABASE
+->SHOW DATABASE
+->USE DATABASE
+->CREATE TABLE
+->INSERT RECORD INTO TABLE
+-.DISPLAY RECORD FROM TABLE(BY SELECT COMMAND)
+--------TABLENAME: RECORD
+ROLL	NAME		FEES	SCHOOL
+1	DEEKSHA	1234	DPS
+2	NIKITA		3456	APS
+3	AKHILESH	5678	DPS
+4	ANU		4567	DPS
+--
+1- SELECT ALL RECORD
+  SELECT * FROM RECORD;
+2- SELECTED COLUMN AND ALL ROWS
+ select col1,col2 from tablename;
+select name,school from record;
+3-  SELECTED ROW AND ALL COLUMNS
+select * from tablename where col=condition/exression;
+ select * from record where name='anu';
+-----------------------------------------------------
+operator : An operator is symbol which perform arithmetic and logical
+operation.
+1-Arithmetic  +,-,*,/
+2-Logical and,or,not
+3- Relational operator.
+  < less than
+ <= less than or equal to
+> greater than
+>= greater than or equal to
+= equal  to
+<> not equal  to

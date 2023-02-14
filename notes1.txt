@@ -1,0 +1,118 @@
+Enter password: ********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.1.59-community MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> craete database nikita;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'craete database nikita' at line 1
+mysql> create database nikita;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> create database deeksha;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create database akhilesh;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| akhilesh           |
+| deeksha            |
+| mysql              |
+| nikita             |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use nikita;
+Database changed
+mysql> create table student(roll int,name char(15),fees decimal,dob date);
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_nikita |
++------------------+
+| student          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> desc student;
++-------+---------------+------+-----+---------+-------+
+| Field | Type          | Null | Key | Default | Extra |
++-------+---------------+------+-----+---------+-------+
+| roll  | int(11)       | YES  |     | NULL    |       |
+| name  | char(15)      | YES  |     | NULL    |       |
+| fees  | decimal(10,0) | YES  |     | NULL    |       |
+| dob   | date          | YES  |     | NULL    |       |
++-------+---------------+------+-----+---------+-------+
+4 rows in set (0.11 sec)
+
+mysql> insert into student(roll,name,fees,dob)values(1001,'Nikita',4567.77,'2003-06-30');
+Query OK, 1 row affected, 1 warning (0.08 sec)
+
+mysql> insert into student(roll,name,fees,dob)values(1002,'Deeksha',4578.89,'2001-06-8');
+Query OK, 1 row affected, 1 warning (0.08 sec)
+
+mysql> insert into student(roll,name,fees,dob)values(1003,'Akhilesh',4878.89,'2002-07-27');
+Query OK, 1 row affected, 1 warning (0.08 sec)
+
+mysql> select * from  student;
++------+----------+------+------------+
+| roll | name     | fees | dob        |
++------+----------+------+------------+
+| 1001 | Nikita   | 4568 | 2003-06-30 |
+| 1002 | Deeksha  | 4579 | 2001-06-08 |
+| 1003 | Akhilesh | 4879 | 2002-07-27 |
++------+----------+------+------------+
+3 rows in set (0.00 sec)
+
+mysql> use deeksha;
+Database changed
+mysql> create table test(id int,name char(10),fees decimal(10,2));
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> insert into test(id,name,fees)values(1001,'Deeksha',4567.77);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into test(id,name,fees)values(1002,'Rohit',3567.77);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into test(id,name,fees)values(1003,'Riya',867.77);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into test(id,name,fees)values(1004,'Priya',2267.77);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into test(id,name,fees)values(1005,'Sangeeta',8267.77);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from test;
++------+----------+---------+
+| id   | name     | fees    |
++------+----------+---------+
+| 1001 | Deeksha  | 4567.77 |
+| 1002 | Rohit    | 3567.77 |
+| 1003 | Riya     |  867.77 |
+| 1004 | Priya    | 2267.77 |
+| 1005 | Sangeeta | 8267.77 |
++------+----------+---------+
+5 rows in set (0.00 sec)
+
+mysql>
+
+
+
